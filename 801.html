@@ -50,6 +50,8 @@
 
     </main>
     <Script>
+        let dataItems = fetch('array.json')
+        console.log(dataItems)
         let addBtn = document.getElementById("add_btn")
         addBtn.addEventListener('click', addGrocery)
         let parentList = document.getElementById("parent_list")
@@ -77,6 +79,16 @@
             parentList.appendChild(newLi)
         }
 
+        let jsonObj = {
+
+            name: "Newbie Corp.",
+            order_count: 0,
+            address: "Po Box City"
+        };
+        const jsonString = JSON.stringify(customer);
+        console.log(jsonString);
+        }
+
         function removeItem(currElement) {
             currElement.parentElement.remove()
             let parentList = document.getElementById("parent_list")
@@ -88,6 +100,7 @@
             }
 
         }
+        // console.log(parentList.children)
     </Script>
 </body>
 
